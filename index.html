@@ -19,53 +19,82 @@
         #header {
             padding: 20px;
         }
-      #main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 50px 0;
-      }
+        #main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
         #revenue {
-            font-size: 48px;
-            margin-bottom: 20px;
+            color: ;
+            margin-top: 50px;
+            font-size: 100px;
+            margin-bottom: 50px;
         }
         .count-box {
             display: inline-block;
-            width: 80px; /* Increase box width */
+            width: auto; /* Make box width dynamic */
             margin: 8px;
             padding: 8px;
             border: 1px solid #ffffff; /* White border */
             background-color: #1a1a1a; /* Dark gray background color */
             border-radius: 10px; /* Rounded corners */
         }
-          #footer {
-          background-color: #333333; /* Lighter shade of black for the footer */
-          padding: 20px;
-          font-size: 12px;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
+        #footer {
+            background-color: #333333; /* Lighter shade of black for the footer */
+            padding: 20px;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
-
+</head>
 <body> 
     </div>
     <div id="main">
+
         <div id="header">
           <h1>Client Revenue Tracker</h1>
         <div id="revenue">
             $1,000,000 <!-- You can dynamically update this value with JavaScript -->
         </div>
-        <div class="count-box">Industry 1</div>
-        <div class="count-box">Industry 2</div>
-        <div class="count-box">Industry 3</div>
-        <!-- Add more count-box divs for additional industries -->
+        <div id="industry-list"></div> <!-- Container for dynamic industries -->
     </div>
     <div id="footer">
-        <p>© 2024 YourCompany. All rights reserved.</p>
+        <p>© 2024 Celmina. All rights reserved.</p>
     </div>
+
+    <script>
+        // Array of industries
+        const industries = [
+            "Beauty/Fashion",
+            "Food & Beverage",
+            "Fitness/Health",
+            "Event Planning/Management",
+            "Healthcare",
+            "Construction",
+            "Consulting",
+            "Sports",
+            "Fashion/Accessories"
+            // Add more industries as needed
+        ];
+
+        // Function to dynamically create count boxes for each industry
+        function createIndustryBoxes() {
+            const industryList = document.getElementById("industry-list");
+            industries.forEach(industry => {
+                const countBox = document.createElement("div");
+                countBox.className = "count-box";
+                countBox.textContent = industry;
+                industryList.appendChild(countBox);
+            });
+        }
+
+        // Call the function to create count boxes on page load
+        createIndustryBoxes();
+    </script>
 </body>
-  
 </html>
