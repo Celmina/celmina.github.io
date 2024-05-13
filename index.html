@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="common.css">
     <style>
         /* Existing CSS styles */
         body {
@@ -31,7 +32,7 @@
         }
         #revenue {
             margin-top: 50px;
-            font-size: 100px;
+            font-size: 100px; /* Default large font size */
             margin-bottom: 50px;
         }
         .count-box {
@@ -43,17 +44,22 @@
             background-color: #1a1a1a; /* Dark gray background color */
             border-radius: 10px; /* Rounded corners */
         }
-        #footer {
-            background-color: #333333; /* Lighter shade of black for the footer */
-            padding: 20px;
-            font-size: 12px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-z-index: 222;
-        }
-    </style>
+
+        
+        
+        /* Responsive adjustments for smaller screens */
+            @media (max-width: 768px) {
+                #revenue {
+                    font-size: 75px; /* Smaller font size for mobile devices */
+                }
+            }
+
+            @media (max-width: 480px) {
+                #revenue {
+                    font-size: 75px; /* Even smaller font size for very small devices */
+                }
+            }
+        </style>
 </head>
 <body> 
 
