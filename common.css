@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #000000; /* Set a completely black background color */
+    color: #ffffff; /* Set text color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#footer {
+    background-color: #333333; /* Lighter shade of black for the footer */
+    padding: 20px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 222;
+}

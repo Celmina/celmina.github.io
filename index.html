@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Revenue</title>
+    <title>Index</title>
+    <link rel="stylesheet" href="header.css">
     <style>
+        /* Existing CSS styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -28,7 +30,6 @@
             padding: 50px 0;
         }
         #revenue {
-            color: ;
             margin-top: 50px;
             font-size: 100px;
             margin-bottom: 50px;
@@ -50,21 +51,44 @@
             bottom: 0;
             width: 100%;
         }
+z-index: 222;
+        }
     </style>
 </head>
 <body> 
-    </div>
-    <div id="main">
 
+    <header>
+      <nav id="navigation">
+        <a href="#" class="logo">Celmina</a>
+        <ul class="links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+          <li><a href="schedule.html">Schedule a Call</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  
+    <!-- Existing HTML content -->
+    <div id="main">
         <div id="header">
           <h1>Client Revenue Tracker</h1>
-        <div id="revenue">
-            $1,000,000 <!-- You can dynamically update this value with JavaScript -->
+          <div id="revenue">
+              $1,000,000 <!-- You can dynamically update this value with JavaScript -->
+          </div>
+          <div id="industry-list"></div> <!-- Container for dynamic industries -->
+      </div>
+      <div id="footer">
+          <p>© 2024 Celmina. All rights reserved.</p>
+      </div>
+
+    <!-- New HTML content for dropdown -->
+    <div id="dropdown-container">
+      <img src="Assets/Dropdown2.png" alt="Dropdown" onclick="toggleDropdown()">
+        <div id="dropdown-content" style="display: none;">
+            <a href="contact.html">Contact Me</a>
+            <a href="schedule.html">Schedule a Call</a>
         </div>
-        <div id="industry-list"></div> <!-- Container for dynamic industries -->
-    </div>
-    <div id="footer">
-        <p>© 2024 Celmina. All rights reserved.</p>
     </div>
 
     <script>
@@ -95,6 +119,12 @@
 
         // Call the function to create count boxes on page load
         createIndustryBoxes();
+
+        // Function to toggle dropdown content
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById("dropdown-content");
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        }
     </script>
 </body>
 </html>

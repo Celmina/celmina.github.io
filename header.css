@@ -1,0 +1,137 @@
+            *{
+              box-sizing:border-box;
+            }
+
+            body{
+              background: #ffffff; /* Change to your desired color */
+              color: #222222; /* Change to your desired color */
+              line-height: normal;
+              font-size: 13px;
+              font-family: sans-serif;
+            }
+
+            a,a:hover{
+              color: #000000; /* Change to your desired color */
+              text-decoration: none;
+              font-weight: 600;
+            }
+
+            nav {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 50px;
+              background: #ffffff;
+              box-shadow: 0 0px 9px 4px rgba(0, 0, 0, .1), 0 -5px 2px 2px rgba(0, 0, 0, .1);
+              z-index: 1000;
+              min-width: 580px;
+            }
+
+            .logo{
+              display: flex;
+              align-items: center;
+              position: relative;
+              float: left;
+              height: 50px;
+              line-height: 50px;
+              padding: 0 15px;
+              font-size: 22px;
+              font-weight: 900;
+              text-transform: uppercase;
+            }
+
+            .logo:hover{
+              background: lighten(desaturate(#000, 80%), 40); /* Change to your desired color */
+            }
+
+            .links{
+              align-items: center;
+              float: right;
+              margin-right: 30px;
+              position: relative;
+            }
+
+            .links li{
+              align-items: center;
+              float: left;
+              list-style: none;
+              position: relative;
+              margin: 10px;
+              display: inline-block;
+            }
+
+            .links li > a{
+              align-items: center;
+              position: relative;
+              display: inline-block;
+              padding: 0 10px;
+              line-height: 30px;
+              height: 30px;
+            }
+
+            .links li > a:hover{
+              align-items: center;
+              color: desaturate(#000, 80%); /* Change to your desired color */
+              background: desaturate(#000, 80%); /* Change to your desired color */
+              border-radius: 2px;
+            }
+
+            .links li > a[class^="trigger-"]{
+              padding-right: 40px;
+            }
+
+            .links li > a .arrow{
+              align-items: center;
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: 35%;
+              text-align: center;
+              right: 10px;
+              border-width: 5px 5px 0 5px;
+              border-style: solid;
+              border-color: rgba(0, 0, 0, .3) transparent;
+            }
+
+            .links li > a .arrow:after{
+              align-items: center;
+              content: "";
+              border-left: 1px solid rgba(0, 0, 0, .15);
+              top: -10px;
+              left: -15px;
+              position: absolute;
+              height: 15px;
+            }
+
+            .links ul{
+              align-items: center;
+              position: absolute;
+              left: 0;
+              top: 40px;
+              margin: 0;
+              background: #ffffff; /* Change to your desired color */
+              border-radius: 2px;
+              box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+              display: none;
+            }
+
+            .links ul > li{
+              align-items: center;
+              clear: both;
+              list-style: none;
+              display: block;
+              padding: 0 10px;
+              margin: 0;
+              width: 100%;
+            }
+
+            .links ul > li:hover{
+              align-items: center;
+              background: lighten(desaturate(#000, 80%), 40); 
+            }
+
+            .links ul > li > a{
+              align-items: center;
+              background: lighten(desaturate(#000, 80%), 40); 
+              color: #ffffff; 
+            }
