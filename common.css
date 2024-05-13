@@ -10,12 +10,30 @@ body {
     min-height: 100vh;
 }
 
+body, html {
+    height: 100%; /* Ensures the full height is utilized for layout calculations */
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    padding-bottom: 60px; /* Adds padding at the bottom equal to or greater than the footer height */
+}
+
 #footer {
     background-color: #333333; /* Lighter shade of black for the footer */
+    color: #ffffff; /* Ensures text in the footer is visible against the dark background */
     padding: 20px;
     font-size: 12px;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 222;
+    text-align: center; /* Centers the text inside the footer */
+}
+
+@media (max-width: 768px) {
+    #main {
+        padding-bottom: 70px; /* Increases padding for smaller screens if necessary */
+    }
 }
