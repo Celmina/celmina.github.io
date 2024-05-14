@@ -10,10 +10,16 @@
 <body>
     <header>
         <nav id="navigation">
-            <a href="index.html" class="logo">Celmina</a>
+            <a href="#" class="logo">Celmina</a>
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="Assets/CELMINA-PORTFOLIO.pdf" target="_blank">Portfolio</a></li>
             </ul>
         </nav>
     </header>
@@ -29,5 +35,15 @@
     <footer id="footer">
         <p>© 2024 Celmina. All rights reserved.</p>
     </footer>
+
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

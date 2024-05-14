@@ -44,7 +44,19 @@
             background-color: #1a1a1a; /* Dark gray background color */
             border-radius: 10px; /* Rounded corners */
         }
+        
+        #portfolio a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004aad; /* Example blue background */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
 
+        #portfolio a:hover {
+            background-color: #00307d; /* Darker blue on hover */
+        }
         
         
         /* Responsive adjustments for smaller screens */
@@ -63,18 +75,28 @@
 </head>
 <body> 
 
+
+
+
     <header>
-      <nav id="navigation">
-        <a href="#" class="logo">Celmina</a>
-        <ul class="links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </nav>
-
-
+        <nav id="navigation">
+            <a href="#" class="logo">Celmina</a>
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="Assets/CELMINA-PORTFOLIO.pdf" target="_blank">Portfolio</a></li>
+            </ul>
+        </nav>
     </header>
 
+
+
+    
   
     <!-- Existing HTML -->
     <div id="main">
@@ -93,7 +115,20 @@
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/celmina/grow-your-revenue', text: 'Schedule a call', color: '#ffffff', textColor: '#1a1a1a', branding: undefined }); }</script>
         <!-- Calendly badge widget end -->
+
+
+        
     <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+    
+
+
+        
         // Array of industries
         const industries = [
             "Beauty/Fashion",
@@ -121,6 +156,8 @@
 
         // Call the function to create count boxes on page load
         createIndustryBoxes();
+
+        
 
         // Function to toggle dropdown content
         function toggleDropdown() {
